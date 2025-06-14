@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)file:///D:/ITBootcamp/daynightchange.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day and Night Theme</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      transition: background-color 0.5s, color 0.5s;
+    }
+
+    .day {
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    .night {
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    .toggle-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      cursor: pointer;
+      background: #ccc;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body class="day">
+  <button class="toggle-btn" onclick="toggleTheme()">Switch to Night</button>
+
+  <h1>Welcome!</h1>
+  <p>This is a simple day/night theme toggle.</p>
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const button = document.querySelector('.toggle-btn');
+
+      if (body.classList.contains('day')) {
+        body.classList.replace('day', 'night');
+        button.textContent = 'Switch to Day';
+      } else {
+        body.classList.replace('night', 'day');
+        button.textContent = 'Switch to Night';
+      }
+    }
+  </script>
+
+
+</body></html>
